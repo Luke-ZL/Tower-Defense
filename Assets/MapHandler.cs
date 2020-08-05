@@ -21,10 +21,10 @@ public class MapHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        loadMap();
-        ColorStartAndEnd();
-        AStar();
-        printPath();
+        
+        //ColorStartAndEnd();
+        
+        //printPath();
     }
 
     // Update is called once per frame
@@ -38,6 +38,16 @@ public class MapHandler : MonoBehaviour
         // todo consdier moving out
         startCube.SetTopColor(Color.black);
         endCube.SetTopColor(Color.white);
+    }
+
+    public List<GridCube> getPath()
+    {
+        if (path == null)
+        {
+            loadMap();
+            AStar();
+        }
+        return path;
     }
 
     public void AStar()
