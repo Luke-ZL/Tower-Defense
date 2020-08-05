@@ -63,19 +63,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CubeHandler.cs" />
     <Compile Include="Assets\DungeonVoxels\Scripts\Knight.cs" />
     <Compile Include="Assets\DungeonVoxels\Scripts\LightFlicker.cs" />
     <Compile Include="Assets\DungeonVoxels\Scripts\SpikeTrap.cs" />
     <Compile Include="Assets\DungeonVoxels\Scripts\TargetFollow.cs" />
-    <Compile Include="Assets\EnemyHit.cs" />
-    <Compile Include="Assets\EnemyMove.cs" />
-    <Compile Include="Assets\GridCube.cs" />
-    <Compile Include="Assets\MapHandler.cs" />
-    <Compile Include="Assets\normalCubeHandler.cs" />
-    <Compile Include="Assets\normalGridCube.cs" />
-    <Compile Include="Assets\normalVaseHandler.cs" />
-    <Compile Include="Assets\TowerHandler.cs" />
+    <Compile Include="Assets\Scripts\CubeHandler.cs" />
+    <Compile Include="Assets\Scripts\EnemyHit.cs" />
+    <Compile Include="Assets\Scripts\EnemyMove.cs" />
+    <Compile Include="Assets\Scripts\GridCube.cs" />
+    <Compile Include="Assets\Scripts\MapHandler.cs" />
+    <Compile Include="Assets\Scripts\normalCubeHandler.cs" />
+    <Compile Include="Assets\Scripts\normalGridCube.cs" />
+    <Compile Include="Assets\Scripts\normalVaseHandler.cs" />
+    <Compile Include="Assets\Scripts\TowerHandler.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Zixuan Lu/Projects/Unity/Tower Defense/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
