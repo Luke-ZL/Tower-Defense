@@ -67,6 +67,8 @@
     <Compile Include="Assets\DungeonVoxels\Scripts\LightFlicker.cs" />
     <Compile Include="Assets\DungeonVoxels\Scripts\SpikeTrap.cs" />
     <Compile Include="Assets\DungeonVoxels\Scripts\TargetFollow.cs" />
+    <Compile Include="Assets\EnemySpawner.cs" />
+    <Compile Include="Assets\MouseHandler.cs" />
     <Compile Include="Assets\Scripts\CubeHandler.cs" />
     <Compile Include="Assets\Scripts\EnemyHit.cs" />
     <Compile Include="Assets\Scripts\EnemyMove.cs" />

@@ -16,7 +16,6 @@ public class EnemyMove : MonoBehaviour
 
     IEnumerator MoveAlongPath()
     {
-        print("hi");
        foreach(GridCube gc in path)
         {
             transform.position = gc.transform.position + 4 * Vector3.up;
