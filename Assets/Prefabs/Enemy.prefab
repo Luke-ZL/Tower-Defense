@@ -64,8 +64,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8f95e5f2aa02a945b1cc85f71ac42cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveInterval: 0.1
-  isLeft: 1
+  moveInterval: 1
+  isLeft: 0
 --- !u!114 &221737601
 MonoBehaviour:
   m_ObjectHideFlags: 0
