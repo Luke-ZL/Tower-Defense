@@ -9,6 +9,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] EnemyMove enemy;
     [SerializeField] Transform parent;
     [SerializeField] bool isLeft;
+    [SerializeField] AudioClip spawn;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +21,11 @@ public class EnemySpawner : MonoBehaviour
     {
         while (true)
         {
+            GetComponent<AudioSource>().PlayOneShot(spawn);
             enemy.isLeft = isLeft;
             var newEnemy = Instantiate(enemy, transform.position, Quaternion.LookRotation(Vector3.right));
             newEnemy.transform.parent = parent;
-            yield return new WaitForSeconds(spawnInterval);
+            yield return new WaitForSeconds(spawnInterval * FindObjectOfType<ScoreHandler>().getDifficultyConst());
         }
     }
 }

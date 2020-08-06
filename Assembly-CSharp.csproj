@@ -72,13 +72,17 @@
     <Compile Include="Assets\Scripts\EnemyMove.cs" />
     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\GridCube.cs" />
+    <Compile Include="Assets\Scripts\HealthHandler.cs" />
     <Compile Include="Assets\Scripts\MapHandler.cs" />
     <Compile Include="Assets\Scripts\MouseHandler.cs" />
     <Compile Include="Assets\Scripts\normalCubeHandler.cs" />
     <Compile Include="Assets\Scripts\normalGridCube.cs" />
     <Compile Include="Assets\Scripts\normalVaseHandler.cs" />
+    <Compile Include="Assets\Scripts\ScoreHandler.cs" />
     <Compile Include="Assets\Scripts\TowerFactory.cs" />
     <Compile Include="Assets\Scripts\TowerHandler.cs" />
+    <Compile Include="Assets\VoxelAnimals\Assets\Scripts\PlayerController.cs" />
+    <None Include="Assets\VoxelAnimals\Documentation\ReadMe.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Zixuan Lu/Projects/Unity/Tower Defense/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
