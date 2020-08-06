@@ -67,17 +67,18 @@
     <Compile Include="Assets\DungeonVoxels\Scripts\LightFlicker.cs" />
     <Compile Include="Assets\DungeonVoxels\Scripts\SpikeTrap.cs" />
     <Compile Include="Assets\DungeonVoxels\Scripts\TargetFollow.cs" />
-    <Compile Include="Assets\EnemySpawner.cs" />
-    <Compile Include="Assets\MouseHandler.cs" />
     <Compile Include="Assets\Scripts\CubeHandler.cs" />
     <Compile Include="Assets\Scripts\EnemyHit.cs" />
     <Compile Include="Assets\Scripts\EnemyMove.cs" />
+    <Compile Include="Assets\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\GridCube.cs" />
     <Compile Include="Assets\Scripts\MapHandler.cs" />
+    <Compile Include="Assets\Scripts\MouseHandler.cs" />
     <Compile Include="Assets\Scripts\normalCubeHandler.cs" />
     <Compile Include="Assets\Scripts\normalGridCube.cs" />
     <Compile Include="Assets\Scripts\normalVaseHandler.cs" />
     <Compile Include="Assets\Scripts\TowerHandler.cs" />
+    <Compile Include="Assets\TowerFactory.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Zixuan Lu/Projects/Unity/Tower Defense/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

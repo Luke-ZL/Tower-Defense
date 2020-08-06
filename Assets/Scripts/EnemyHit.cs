@@ -25,7 +25,9 @@ public class EnemyHit : MonoBehaviour
         if (hp <= 0)
         {
             var dp = Instantiate(deathParticle, transform.position, Quaternion.identity);
+            //dp.transform.parent = gameObject.transform;
             dp.Play();
+            Destroy(dp.gameObject, dp.main.duration);
             Destroy(gameObject);
         } else
         {
