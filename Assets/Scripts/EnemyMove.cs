@@ -6,11 +6,12 @@ public class EnemyMove : MonoBehaviour
 {
     List<GridCube> path;
     [SerializeField] float moveInterval = 1f;
+    public bool isLeft;
     // Start is called before the first frame update
     void Start()
     {
         MapHandler mapHandler = FindObjectOfType<MapHandler>();
-        path = mapHandler.getPath();
+        path = mapHandler.getPath(isLeft);
         StartCoroutine(MoveAlongPath());
     }
 

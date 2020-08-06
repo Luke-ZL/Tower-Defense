@@ -77,8 +77,8 @@
     <Compile Include="Assets\Scripts\normalCubeHandler.cs" />
     <Compile Include="Assets\Scripts\normalGridCube.cs" />
     <Compile Include="Assets\Scripts\normalVaseHandler.cs" />
+    <Compile Include="Assets\Scripts\TowerFactory.cs" />
     <Compile Include="Assets\Scripts\TowerHandler.cs" />
-    <Compile Include="Assets\TowerFactory.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Zixuan Lu/Projects/Unity/Tower Defense/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

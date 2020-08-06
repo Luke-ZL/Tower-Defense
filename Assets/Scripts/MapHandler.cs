@@ -6,10 +6,11 @@ using System.Xml;
 
 public class MapHandler : MonoBehaviour
 {
-    [SerializeField] GridCube startCube, endCube;
+    [SerializeField] GridCube leftstartCube, rightStartCube, endCube;
     Dictionary<Vector2Int, GridCube> map = new Dictionary<Vector2Int, GridCube>();
     Dictionary<Vector2Int, Vector2Int> cameFrom = new Dictionary<Vector2Int, Vector2Int>();
-    List<GridCube> path;
+    List<GridCube> pathLeft;
+    List<GridCube> pathRight;
     Vector2Int[] directions = {
         Vector2Int.up,
         Vector2Int.right,
@@ -21,9 +22,7 @@ public class MapHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        //ColorStartAndEnd();
-        
+               
         //printPath();
     }
 
@@ -33,25 +32,41 @@ public class MapHandler : MonoBehaviour
         
     }
 
-    private void ColorStartAndEnd()
-    {
-        // todo consdier moving out
-        startCube.SetTopColor(Color.black);
-        endCube.SetTopColor(Color.white);
-    }
 
-    public List<GridCube> getPath()
+    public List<GridCube> getPath(bool isLeft)
     {
-        if (path == null)
+        if (isLeft)
         {
-            loadMap();
-            AStar();
+            if (pathLeft == null)
+            {
+                if (map.Count == 0) loadMap();
+                AStar(isLeft);
+                cameFrom.Clear();
+            }
+            return pathLeft;
+        } else
+        {
+            if (pathRight == null)
+            {
+                if (map.Count == 0) loadMap();
+                AStar(isLeft);
+                cameFrom.Clear();
+            }
+            return pathRight;
         }
-        return path;
     }
 
-    public void AStar()
+    public void AStar(bool isLeft)
     {
+        GridCube startCube;
+        if (isLeft)
+        {
+            startCube = leftstartCube;
+        }
+        else
+        {
+            startCube = rightStartCube;
+        }
         MinHeap openSet = new MinHeap(map.Count);
         openSet.Add(convertVec2Int(startCube.getGridPos()));
         Dictionary<Vector2Int, int> gScore = new Dictionary<Vector2Int, int>();
@@ -64,7 +79,14 @@ public class MapHandler : MonoBehaviour
             Vector2Int current = convertInt2Vec(openSet.Pop());
             if (current == endCube.getGridPos())
             {
-                path = ReconstructPath(current);
+                if (isLeft)
+                {
+                    pathLeft = ReconstructPath(current);
+                }
+                else
+                {
+                    pathRight = ReconstructPath(current);
+                }
                 return;
             }
 
@@ -114,26 +136,6 @@ public class MapHandler : MonoBehaviour
             else
             {
                 map.Add(gridCube.getGridPos(), gridCube);
-            }
-        }
-    }
-
-    public void printMapKeys()
-    {
-        foreach (Vector2Int key in map.Keys)
-        {
-            print(key);
-        }
-    }
-
-    private void printPath()
-    {
-        if (path == null) print("NO PATH FOUND");
-        else
-        {
-            foreach (GridCube gc in path)
-            {
-                print(gc.getGridPos());
             }
         }
     }
